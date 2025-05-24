@@ -20,7 +20,12 @@
     "url": "git+https://github.com/nirmitkotadiya/create-scalable-react-app.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf dist",
+    "copy-templates": "mkdir -p dist && cp -r vite-react-ts dist && cp -r templates dist",
+    "build": "npm run clean && npm run copy-templates && npx tsc",
+    "dev": "npm run clean && npm run copy-templates && npx tsc --watch",
+    "start": "node dist/src/index.js",
+    "pack": "npm run build && bash ./scripts/pack.sh"
   },
   "keywords": [],
   "author": "Nirmit Kotadiya",
