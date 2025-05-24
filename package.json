@@ -9,6 +9,12 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
+  "bin": {
+    "create-scalable-react-app": "dist/src/index.js"
+  },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nirmitkotadiya/create-scalable-react-app.git"
