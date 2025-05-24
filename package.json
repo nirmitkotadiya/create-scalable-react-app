@@ -2,23 +2,12 @@
   "name": "create-scalable-react-app",
   "version": "1.0.0",
   "description": "Scaffold a scalable, enterprise-ready React app with TypeScript, Redux Toolkit, Tailwind CSS, and best practices built-in. Quickly generate a modular, maintainable, and developer-friendly project structure optimized for modern React development.",
-  "devDependencies": {
-    "@types/ejs": "^3.1.5",
-    "@types/node": "^22.15.21",
-    "@types/prompts": "^2.4.9",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
-  },
   "bin": {
     "create-scalable-react-app": "dist/src/index.js"
   },
   "files": [
     "dist"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nirmitkotadiya/create-scalable-react-app.git"
-  },
   "scripts": {
     "clean": "rm -rf dist",
     "copy-templates": "mkdir -p dist && cp -r vite-react-ts dist",
@@ -27,6 +16,10 @@
     "start": "node dist/src/index.js",
     "pack": "npm run build && bash ./scripts/pack.sh"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nirmitkotadiya/create-scalable-react-app.git"
+  },
   "keywords": [],
   "author": "Nirmit Kotadiya",
   "license": "ISC",
@@ -34,10 +27,14 @@
     "url": "https://github.com/nirmitkotadiya/create-scalable-react-app/issues"
   },
   "homepage": "https://github.com/nirmitkotadiya/create-scalable-react-app#readme",
+  "devDependencies": {
+    "@types/ejs": "^3.1.5",
+    "@types/node": "^22.15.21",
+    "@types/prompts": "^2.4.9",
+    "typescript": "^5.8.3"
+  },
   "dependencies": {
     "ejs": "^3.1.10",
-    "execa": "^9.5.3",
-    "fs-extra": "^11.3.0",
     "prompts": "^2.4.2"
   }
 }
