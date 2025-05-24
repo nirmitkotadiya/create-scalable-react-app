@@ -1,6 +1,6 @@
 {
   "name": "create-scalable-react-app",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Scaffold a scalable, enterprise-ready React app with TypeScript, Redux Toolkit, Tailwind CSS, and best practices built-in. Quickly generate a modular, maintainable, and developer-friendly project structure optimized for modern React development.",
   "bin": {
     "create-scalable-react-app": "dist/src/index.js"
