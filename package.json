@@ -21,7 +21,7 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "copy-templates": "mkdir -p dist && cp -r vite-react-ts dist && cp -r templates dist",
+    "copy-templates": "mkdir -p dist && cp -r vite-react-ts dist",
     "build": "npm run clean && npm run copy-templates && npx tsc",
     "dev": "npm run clean && npm run copy-templates && npx tsc --watch",
     "start": "node dist/src/index.js",
