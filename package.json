@@ -1,8 +1,7 @@
 {
   "name": "create-scalable-react-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Scaffold a scalable, enterprise-ready React app with TypeScript, Redux Toolkit, Tailwind CSS, and best practices built-in. Quickly generate a modular, maintainable, and developer-friendly project structure optimized for modern React development.",
   "devDependencies": {
     "@types/ejs": "^3.1.5",
     "@types/node": "^22.15.21",
@@ -10,12 +9,20 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nirmitkotadiya/create-scalable-react-app.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Nirmit Kotadiya",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nirmitkotadiya/create-scalable-react-app/issues"
+  },
+  "homepage": "https://github.com/nirmitkotadiya/create-scalable-react-app#readme",
   "dependencies": {
     "ejs": "^3.1.10",
     "execa": "^9.5.3",
