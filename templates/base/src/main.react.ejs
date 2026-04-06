@@ -1,0 +1,16 @@
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App';
+<% if (tailwind) { %>import './index.css';<% } %>
+<% if (state === 'redux') { %>
+import { Provider } from 'react-redux';
+import { store } from './store';
+<% } %>
+
+createRoot(document.getElementById('root')<%= language === 'ts' ? '!' : '' %>).render(
+  <StrictMode>
+    <% if (state === 'redux') { %><Provider store={store}><% } %>
+      <App />
+    <% if (state === 'redux') { %></Provider><% } %>
+  </StrictMode>,
+);

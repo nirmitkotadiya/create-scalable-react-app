@@ -1,0 +1,12 @@
+export default [
+  { ignores: ['dist'] },
+  {
+    files: ['**/*.{js,jsx<%= language === "ts" ? ",ts,tsx" : "" %>}'],
+    languageOptions: {
+      ecmaVersion: 2020,
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+    },
+  },
+]
