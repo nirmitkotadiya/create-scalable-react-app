@@ -1,6 +1,6 @@
 {
   "name": "create-scalable-react-app",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Scaffold a scalable, enterprise-ready React app with TypeScript, Redux Toolkit, Tailwind CSS, and best practices built-in. Quickly generate a modular, maintainable, and developer-friendly project structure optimized for modern React development.",
   "bin": {
     "create-scalable-react-app": "dist/src/index.js"
@@ -9,10 +9,11 @@
     "dist"
   ],
   "scripts": {
-    "clean": "rm -rf dist",
-    "copy-templates": "mkdir -p dist && cp -r vite-react-ts dist",
-    "build": "npm run clean && npm run copy-templates && npx tsc",
-    "dev": "npm run clean && npm run copy-templates && npx tsc --watch",
+    "clean": "node -e \"const fs = require('fs'); fs.rmSync('dist', { recursive: true, force: true });\"",
+    "copy-templates": "node -e \"const fs = require('fs'); fs.cpSync('templates', 'dist/templates', { recursive: true });\"",
+    "build": "npm run clean && npm run copy-templates && tsc",
+    "dev": "npm run clean && npm run copy-templates && tsc --watch",
+    "test:permutations": "node ./scripts/test-permutations.js",
     "start": "node dist/src/index.js",
     "pack": "npm run build && bash ./scripts/pack.sh"
   },

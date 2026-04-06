@@ -1,0 +1,33 @@
+import { useState } from 'react';
+
+export const AuthProfile = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
+  
+  <% if (tailwind) { %>
+  return (
+    <div className="p-6 border border-slate-200 rounded-lg bg-slate-50">
+      <h2 className="text-xl font-bold text-slate-900 mt-0 mb-2">Authentication Module</h2>
+      <p className="text-slate-600 mb-4">User state: <strong className="font-semibold text-slate-900">{loggedIn ? 'Logged In ✅' : 'Logged Out ❌'}</strong></p>
+      <button 
+        className={`px-4 py-2 text-white font-medium rounded transition-colors cursor-pointer ${loggedIn ? 'bg-red-500 hover:bg-red-600' : 'bg-emerald-500 hover:bg-emerald-600'}`}
+        onClick={() => setLoggedIn(!loggedIn)}
+      >
+        {loggedIn ? 'Logout' : 'Login'}
+      </button>
+    </div>
+  );
+  <% } else { %>
+  return (
+    <div style={{ padding: '1.5rem', border: '1px solid #e2e8f0', borderRadius: '0.5rem', backgroundColor: '#f8fafc' }}>
+      <h2 style={{ marginTop: 0, color: '#0f172a' }}>Authentication Module</h2>
+      <p style={{ color: '#475569' }}>User state: <strong>{loggedIn ? 'Logged In ✅' : 'Logged Out ❌'}</strong></p>
+      <button 
+        style={{ padding: '0.5rem 1rem', backgroundColor: loggedIn ? '#ef4444' : '#10b981', color: 'white', border: 'none', borderRadius: '0.25rem', cursor: 'pointer' }} 
+        onClick={() => setLoggedIn(!loggedIn)}
+      >
+        {loggedIn ? 'Logout' : 'Login'}
+      </button>
+    </div>
+  );
+  <% } %>
+};
